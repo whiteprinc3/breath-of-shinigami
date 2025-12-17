@@ -5,22 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" 
       content="default-src * 'unsafe-inline' 'unsafe-eval'; style-src * 'unsafe-inline';">
-    <title>🔆 Дыхание Света</title>
+    <title>🌙 Дыхание Шинигами</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --black: #e7e7e7;
-            --dark: #3d3d3d;
-            --gray: #adadad;
-            --light-gray: #2a2a2a;
-            --white: #ffffff;
-            --light: #f0f0f0;
-            --accent: #2e2e2e;
-            --gold: #ffd700;
-            --dark-gold: #b8860b;
-            --success: #ffe600;
-            --blood-red: #8b6b00;
-            --dark-red: #604a00;
+            --black: #f0f0f5;
+            --dark: #8c71dd;
+            --gray: #6a57b8;
+            --light-gray: #6b6bc5;
+            --white: #643eb1;
+            --light: #6045b4;
+            --accent: #6b5b9a;
+            --purple: #6d3b9c;
+            --dark-purple: #4b0082;
+            --light-purple: #9370db;
+            --moon-glow: #d8bfd8;
+            --success: #ba55d3;
+            --blood-red: #8a2be2;
+            --dark-red: #b374e0;
             --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
         
@@ -41,18 +43,18 @@
         }
 
         .server-info {
-            background: rgba(40, 40, 40, 0.3);
+            background: rgba(90, 74, 140, 0.3);
             padding: 12px 20px;
             border-radius: 10px;
-            border: 1px solid rgba(100, 100, 100, 0.4);
+            border: 1px solid rgba(139, 107, 226, 0.4);
             display: inline-flex;
             align-items: center;
             gap: 10px;
             font-family: monospace;
             font-size: 1.1em;
             margin-top: 20px;
-            color: #e0e0e0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            color: #4a3a7a;
+            box-shadow: 0 2px 10px rgba(90, 74, 140, 0.3);
         }
         
         body {
@@ -85,7 +87,7 @@
         .bg-circle {
             position: absolute;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(139, 107, 226, 0.05);
             animation: float 20s infinite linear;
         }
         
@@ -125,13 +127,14 @@
         
         /* Навигация */
         .navbar {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(15px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(139, 107, 226, 0.2);
             padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 4px 20px rgba(139, 107, 226, 0.1);
         }
         
         .nav-container {
@@ -149,7 +152,7 @@
             gap: 15px;
             font-size: 1.8em;
             font-weight: 700;
-            background: linear-gradient(45deg, var(--white), var(--light));
+            background: linear-gradient(45deg, var(--purple), var(--dark-purple));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -165,25 +168,25 @@
         .logo-icon {
             width: 50px;
             height: 50px;
-            background: linear-gradient(45deg, #ffd700, #ffed4e, #ffcc00);
+            background: linear-gradient(45deg, #8a2be2, #9370db, #4b0082);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             animation: pulse 3s infinite;
-            border: 2px solid rgba(255, 215, 0, 0.5);
+            border: 2px solid rgba(139, 107, 226, 0.5);
         }
         
         .logo-icon i {
             color: rgba(255, 255, 255, 0.9);
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+            text-shadow: 0 0 10px rgba(139, 107, 226, 0.5);
             font-size: 1.3em;
         }
         
         @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.3); }
-            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(255, 215, 0, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 215, 0, 0); }
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(139, 107, 226, 0.3); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(139, 107, 226, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(139, 107, 226, 0); }
         }
         
         .nav-links {
@@ -192,7 +195,7 @@
         }
         
         .nav-link {
-            color: var(--light);
+            color: var(--dark-purple);
             text-decoration: none;
             padding: 12px 25px;
             border-radius: 25px;
@@ -208,17 +211,17 @@
         }
         
         .nav-link:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.3);
-            color: var(--white);
+            background: rgba(139, 107, 226, 0.1);
+            border-color: rgba(139, 107, 226, 0.3);
+            color: var(--dark-purple);
             transform: translateY(-2px);
         }
         
         .nav-link.active {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: var(--gold);
-            color: var(--white);
-            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+            background: rgba(139, 107, 226, 0.15);
+            border-color: var(--purple);
+            color: var(--dark-purple);
+            box-shadow: 0 5px 15px rgba(139, 107, 226, 0.2);
         }
         
         /* Секции */
@@ -250,11 +253,11 @@
         .hero h1 {
             font-size: 4em;
             margin-bottom: 20px;
-            background: linear-gradient(45deg, var(--white), var(--light), var(--accent));
+            background: linear-gradient(45deg, var(--dark-purple), var(--purple), var(--light-purple));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+            text-shadow: 0 0 30px rgba(139, 107, 226, 0.3);
         }
         
         .hero p {
@@ -288,7 +291,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(139, 107, 226, 0.1), transparent);
             transition: left 0.7s ease;
             z-index: -1;
         }
@@ -310,18 +313,19 @@
         }
         
         .feature-card {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 20px;
             padding: 40px 30px;
             backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(139, 107, 226, 0.2);
             text-align: center;
+            color: var(--dark-purple);
         }
         
         .feature-icon {
             width: 80px;
             height: 80px;
-            background: linear-gradient(45deg, #ffd700, #ffed4e, #ffcc00);
+            background: linear-gradient(45deg, #8a2be2, #9370db, #4b0082);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -329,14 +333,14 @@
             margin: 0 auto 25px;
             font-size: 2em;
             animation: pulse 3s infinite;
-            border: 2px solid rgba(255, 215, 0, 0.5);
+            border: 2px solid rgba(139, 107, 226, 0.5);
             transition: var(--transition);
         }
         
         .feature-card h3 {
             font-size: 1.8em;
             margin-bottom: 15px;
-            background: linear-gradient(45deg, var(--white), var(--light));
+            background: linear-gradient(45deg, var(--dark-purple), var(--purple));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -353,11 +357,11 @@
         .feature-button {
             display: inline-block;
             padding: 12px 30px;
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--white);
+            background: rgba(139, 107, 226, 0.1);
+            color: var(--dark-purple);
             text-decoration: none;
             border-radius: 25px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(139, 107, 226, 0.3);
             font-weight: 600;
             transition: var(--transition);
             position: relative;
@@ -372,7 +376,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(139, 107, 226, 0.2), transparent);
             transition: left 0.5s ease;
         }
         
@@ -384,7 +388,7 @@
             font-size: 2.5em;
             margin-bottom: 50px;
             text-align: center;
-            background: linear-gradient(45deg, var(--white), var(--light));
+            background: linear-gradient(45deg, var(--dark-purple), var(--purple));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -399,17 +403,18 @@
         }
         
         .rank-card {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 20px;
             padding: 35px 30px;
             backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(139, 107, 226, 0.2);
+            color: var(--dark-purple);
         }
         
         .rank-icon {
             width: 70px;
             height: 70px;
-            background: linear-gradient(45deg, #ffd700, #ffed4e, #ffcc00);
+            background: linear-gradient(45deg, #8a2be2, #9370db, #4b0082);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -417,14 +422,14 @@
             margin-bottom: 20px;
             font-size: 1.8em;
             animation: pulse 3s infinite;
-            border: 2px solid rgba(255, 215, 0, 0.5);
+            border: 2px solid rgba(139, 107, 226, 0.5);
             transition: var(--transition);
         }
         
         .rank-title {
             font-size: 1.6em;
             margin-bottom: 15px;
-            background: linear-gradient(45deg, var(--white), var(--light));
+            background: linear-gradient(45deg, var(--dark-purple), var(--purple));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -434,17 +439,17 @@
         .rank-points {
             font-size: 2.2em;
             font-weight: 700;
-            color: var(--white);
+            color: var(--dark-purple);
             margin-bottom: 10px;
-            text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+            text-shadow: 0 0 15px rgba(139, 107, 226, 0.3);
             transition: var(--transition);
         }
         
         .rank-cooldown {
-            color: var(--accent);
+            color: var(--purple);
             font-weight: 600;
             margin-bottom: 15px;
-            border-left: 3px solid var(--white);
+            border-left: 3px solid var(--dark-purple);
             padding-left: 15px;
             display: flex;
             align-items: center;
@@ -461,7 +466,7 @@
         .progress-container {
             width: 100%;
             height: 8px;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(139, 107, 226, 0.1);
             border-radius: 4px;
             margin: 15px 0;
             overflow: hidden;
@@ -469,7 +474,7 @@
         
         .progress-bar {
             height: 100%;
-            background: linear-gradient(90deg, #ffd700, #ffed4e, #ffcc00);
+            background: linear-gradient(90deg, #8a2be2, #9370db, #4b0082);
             border-radius: 4px;
             width: 0;
             transition: width 1.5s ease-in-out, box-shadow 0.3s ease;
@@ -484,31 +489,32 @@
         }
         
         .activity-item {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.9);
             padding: 25px;
             border-radius: 15px;
-            border-left: 4px solid var(--white);
+            border-left: 4px solid var(--dark-purple);
             display: flex;
             justify-content: space-between;
             align-items: center;
+            color: var(--dark-purple);
         }
         
         .activity-name {
             font-weight: 600;
-            color: var(--white);
+            color: var(--dark-purple);
             flex: 1;
             font-size: 1.1em;
             transition: var(--transition);
         }
         
         .activity-points {
-            color: var(--white);
+            color: var(--dark-purple);
             font-weight: 700;
             font-size: 1.3em;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(139, 107, 226, 0.1);
             padding: 8px 15px;
             border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(139, 107, 226, 0.2);
             min-width: 100px;
             text-align: center;
             transition: var(--transition);
@@ -523,34 +529,35 @@
         }
         
         .honor-card {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.9);
             padding: 25px;
             border-radius: 15px;
             text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(139, 107, 226, 0.2);
+            color: var(--dark-purple);
         }
         
         .honor-card.special {
-            border-color: var(--gold);
-            background: rgba(255, 215, 0, 0.05);
+            border-color: var(--purple);
+            background: rgba(139, 107, 226, 0.1);
         }
         
         .honor-title {
             font-size: 1.3em;
             margin-bottom: 10px;
-            color: var(--white);
+            color: var(--dark-purple);
             transition: var(--transition);
         }
         
         .honor-cost {
             font-size: 1.5em;
             font-weight: bold;
-            color: var(--gold);
+            color: var(--purple);
             transition: var(--transition);
         }
         
         .honor-cost.free {
-            color: #ffd000;
+            color: #8a2be2;
         }
 
         /* Правила */
@@ -562,17 +569,18 @@
         }
         
         .rule-card {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 20px;
             padding: 35px 30px;
             backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(139, 107, 226, 0.2);
+            color: var(--dark-purple);
         }
         
         .rule-icon {
             width: 70px;
             height: 70px;
-            background: linear-gradient(45deg, #ffd700, #ffed4e, #ffcc00);
+            background: linear-gradient(45deg, #8a2be2, #9370db, #4b0082);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -580,14 +588,14 @@
             margin-bottom: 20px;
             font-size: 1.8em;
             animation: pulse 3s infinite;
-            border: 2px solid rgba(255, 215, 0, 0.5);
+            border: 2px solid rgba(139, 107, 226, 0.5);
             transition: var(--transition);
         }
         
         .rule-title {
             font-size: 1.6em;
             margin-bottom: 20px;
-            background: linear-gradient(45deg, var(--white), var(--light));
+            background: linear-gradient(45deg, var(--dark-purple), var(--purple));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -610,7 +618,7 @@
             content: '•';
             position: absolute;
             left: 10px;
-            color: var(--gold);
+            color: var(--purple);
             font-weight: bold;
         }
 
@@ -627,7 +635,7 @@
             font-size: 2.2em;
             margin-bottom: 40px;
             text-align: center;
-            background: linear-gradient(45deg, var(--white), var(--light));
+            background: linear-gradient(45deg, var(--dark-purple), var(--purple));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -642,7 +650,7 @@
             transform: translateX(-50%);
             width: 100px;
             height: 2px;
-            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            background: linear-gradient(90deg, transparent, var(--purple), transparent);
         }
         
         .members-grid {
@@ -655,32 +663,33 @@
         }
         
         .member-card {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 20px;
             padding: 30px 25px;
             backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(139, 107, 226, 0.2);
             text-align: center;
             position: relative;
+            color: var(--dark-purple);
         }
         
         .member-avatar {
             width: 80px;
             height: 80px;
-            background: linear-gradient(45deg, #ffd700, #ffed4e, #ffcc00);
+            background: linear-gradient(45deg, #8a2be2, #9370db, #4b0082);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 20px;
             font-size: 2em;
-            border: 2px solid rgba(255, 215, 0, 0.5);
+            border: 2px solid rgba(139, 107, 226, 0.5);
             animation: pulse 3s infinite;
             transition: var(--transition);
         }
         
         .member-rank {
-            color: var(--gold);
+            color: var(--purple);
             font-weight: 600;
             margin-bottom: 8px;
             font-size: 1.1em;
@@ -690,7 +699,7 @@
         .member-name {
             font-size: 1.4em;
             margin-bottom: 10px;
-            background: linear-gradient(45deg, var(--white), var(--light));
+            background: linear-gradient(45deg, var(--dark-purple), var(--purple));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -705,13 +714,13 @@
         }
         
         .member-card.vacant {
-            background: rgba(255, 255, 255, 0.03);
-            border: 2px dashed rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.6);
+            border: 2px dashed rgba(139, 107, 226, 0.3);
         }
         
         .member-card.vacant .member-avatar {
             background: linear-gradient(45deg, #ccc, #ddd);
-            border-color: rgba(255, 255, 255, 0.1);
+            border-color: rgba(139, 107, 226, 0.1);
         }
         
         .member-card.vacant .member-name {
@@ -725,312 +734,315 @@
             text-align: center;
             margin-top: 80px;
             padding-top: 40px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--accent);
+            border-top: 1px solid rgba(139, 107, 226, 0.2);
+            color: var(--purple);
         }
         
         /* Переключатель темы */
         .theme-switcher {
             display: flex;
             gap: 5px;
-            background: rgba(40, 40, 40, 0.8);
+            background: rgba(255, 255, 255, 0.9);
             padding: 5px;
             border-radius: 20px;
-            border: 1px solid rgba(100, 100, 100, 0.3);
+            border: 1px solid rgba(139, 107, 226, 0.2);
             margin-left: 30px;
             margin-right: 10px;
         }
 
-        [data-theme="light"] .theme-switcher {
-            background: rgba(255, 255, 255, 0.9);
-            border: 1px solid rgba(100, 100, 100, 0.2);
+        [data-theme="dark"] .theme-switcher {
+            background: rgba(30, 30, 40, 0.9);
+            border: 1px solid rgba(139, 107, 226, 0.3);
         }
 
         .theme-btn {
             background: transparent;
             border: none;
-            color: #cccccc;
+            color: #4a5568;
             padding: 8px 12px;
             border-radius: 15px;
             cursor: pointer;
             transition: all 0.3s ease;
         }
 
-        [data-theme="light"] .theme-btn {
-            color: #4a5568;
+        [data-theme="dark"] .theme-btn {
+            color: #cccccc;
         }
 
         .theme-btn.active {
-            background: rgba(100, 100, 100, 0.3);
+            background: rgba(139, 107, 226, 0.2);
+            color: #8a2be2;
+        }
+
+        [data-theme="dark"] .theme-btn.active {
+            background: rgba(139, 107, 226, 0.3);
             color: #ffffff;
         }
 
-        [data-theme="light"] .theme-btn.active {
-            background: rgba(100, 100, 100, 0.2);
-            color: #4a5568;
+        /* Темная тема (черная с фиолетовыми элементами) */
+        [data-theme="dark"] {
+            --black: #0a0a0f;
+            --dark: #1a1a2e;
+            --gray: #2d2d44;
+            --light-gray: #3a3a55;
+            --white: #e6e6fa;
+            --light: #d8bfd8;
+            --accent: #9370db;
+            --purple: #8a2be2;
+            --dark-purple: #6b5b9a;
+            --light-purple: #9370db;
+            --moon-glow: #d8bfd8;
+            --success: #ba55d3;
+            --blood-red: #8a2be2;
+            --dark-red: #4b0082;
         }
 
-        /* Кровавая тема */
-        [data-theme="blood"] {
-            --bg-primary: #1a1200;
-            --bg-secondary: #2a1a00;
-            --bg-card: #1a1200;
-            --text-primary: #fff8dc;
-            --text-secondary: #ffd700;
-            --accent-color: #b8860b;
-            --border-color: #8b6914;
-            --dark-text: #fff8dc;
-            --gold: #ffd700;
-            --dark-gold: #b8860b;
-            --darker-gold: #8b6914;
+        [data-theme="dark"] body {
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #2d2d44 100%);
+            color: #e6e6fa;
         }
 
-        [data-theme="blood"] body {
-            background: linear-gradient(135deg, #0a0800 0%, #1a1200 50%, #2a1a00 100%);
-            color: #fff8dc;
+        [data-theme="dark"] .navbar {
+            background: rgba(26, 26, 46, 0.95) !important;
+            border-bottom: 1px solid var(--purple) !important;
+            box-shadow: 0 4px 20px rgba(139, 107, 226, 0.3);
         }
 
-        [data-theme="blood"] .navbar {
-            background: rgba(42, 26, 0, 0.95) !important;
-            border-bottom: 1px solid var(--border-color) !important;
-            box-shadow: 0 4px 20px rgba(184, 134, 11, 0.3);
-        }
-
-        [data-theme="blood"] .logo {
-            background: linear-gradient(45deg, #fff8dc, #ffd700) !important;
+        [data-theme="dark"] .logo {
+            background: linear-gradient(45deg, #e6e6fa, #9370db, #8a2be2) !important;
             -webkit-background-clip: text !important;
             -webkit-text-fill-color: transparent !important;
             background-clip: text !important;
         }
 
-        [data-theme="blood"] .feature-card,
-        [data-theme="blood"] .rank-card,
-        [data-theme="blood"] .rule-card,
-        [data-theme="blood"] .member-card,
-        [data-theme="blood"] .form-container {
-            background: rgba(42, 26, 0, 0.8) !important;
-            border: 1px solid var(--border-color) !important;
-            box-shadow: 0 8px 32px rgba(184, 134, 11, 0.2) !important;
-            color: #fff8dc !important;
+        [data-theme="dark"] .feature-card,
+        [data-theme="dark"] .rank-card,
+        [data-theme="dark"] .rule-card,
+        [data-theme="dark"] .member-card,
+        [data-theme="dark"] .form-container {
+            background: rgba(42, 42, 62, 0.9) !important;
+            border: 1px solid var(--purple) !important;
+            box-shadow: 0 8px 32px rgba(139, 107, 226, 0.2) !important;
+            color: #e6e6fa !important;
         }
 
-        [data-theme="blood"] .nav-link {
-            background: rgba(58, 38, 0, 0.7) !important;
-            border: 1px solid rgba(184, 134, 11, 0.3) !important;
-            color: #fff8dc !important;
+        [data-theme="dark"] .nav-link {
+            background: rgba(58, 58, 78, 0.7) !important;
+            border: 1px solid rgba(139, 107, 226, 0.3) !important;
+            color: #e6e6fa !important;
         }
 
-        [data-theme="blood"] .nav-link.active {
-            background: rgba(184, 134, 11, 0.3) !important;
-            border-color: var(--accent-color) !important;
-            color: #fff8dc !important;
+        [data-theme="dark"] .nav-link.active {
+            background: rgba(139, 107, 226, 0.3) !important;
+            border-color: var(--purple) !important;
+            color: #e6e6fa !important;
         }
 
-        [data-theme="blood"] .hero h1,
-        [data-theme="blood"] .section-title,
-        [data-theme="blood"] .page-header h1,
-        [data-theme="blood"] .category-title {
-            color: #fff8dc !important;
-            text-shadow: 0 0 20px rgba(255, 215, 0, 0.4) !important;
-            background: linear-gradient(45deg, #fff8dc, #ffd700, #b8860b) !important;
+        [data-theme="dark"] .hero h1,
+        [data-theme="dark"] .section-title,
+        [data-theme="dark"] .page-header h1,
+        [data-theme="dark"] .category-title {
+            color: #e6e6fa !important;
+            text-shadow: 0 0 20px rgba(139, 107, 226, 0.4) !important;
+            background: linear-gradient(45deg, #e6e6fa, #9370db, #8a2be2) !important;
             -webkit-background-clip: text !important;
             -webkit-text-fill-color: transparent !important;
             background-clip: text !important;
         }
 
-        [data-theme="blood"] .feature-card h3,
-        [data-theme="blood"] .rank-title,
-        [data-theme="blood"] .rule-title,
-        [data-theme="blood"] .member-name {
-            color: #fff8dc !important;
-            background: linear-gradient(45deg, #fff8dc, #ffd700) !important;
+        [data-theme="dark"] .feature-card h3,
+        [data-theme="dark"] .rank-title,
+        [data-theme="dark"] .rule-title,
+        [data-theme="dark"] .member-name {
+            color: #e6e6fa !important;
+            background: linear-gradient(45deg, #e6e6fa, #9370db) !important;
             -webkit-background-clip: text !important;
             -webkit-text-fill-color: transparent !important;
             background-clip: text !important;
         }
 
-        [data-theme="blood"] .hero p,
-        [data-theme="blood"] .feature-card p,
-        [data-theme="blood"] .rank-card p,
-        [data-theme="blood"] .rule-card p,
-        [data-theme="blood"] .member-role,
-        [data-theme="blood"] .rule-list li {
-            color: #ffebcd !important;
+        [data-theme="dark"] .hero p,
+        [data-theme="dark"] .feature-card p,
+        [data-theme="dark"] .rank-card p,
+        [data-theme="dark"] .rule-card p,
+        [data-theme="dark"] .member-role,
+        [data-theme="dark"] .rule-list li {
+            color: #d8bfd8 !important;
         }
 
-        [data-theme="blood"] .server-info {
-            background: rgba(184, 134, 11, 0.15);
-            border: 1px solid rgba(184, 134, 11, 0.4);
-            color: #fff8dc;
+        [data-theme="dark"] .server-info {
+            background: rgba(139, 107, 226, 0.15);
+            border: 1px solid rgba(139, 107, 226, 0.4);
+            color: #e6e6fa;
         }
 
-        [data-theme="blood"] .rank-points {
-            color: #ffd700 !important;
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        [data-theme="dark"] .rank-points {
+            color: #9370db !important;
+            text-shadow: 0 0 10px rgba(139, 107, 226, 0.5);
         }
 
-        [data-theme="blood"] .rank-cooldown {
-            color: #b8860b !important;
-            border-left-color: #ffd700 !important;
+        [data-theme="dark"] .rank-cooldown {
+            color: #9370db !important;
+            border-left-color: #8a2be2 !important;
         }
 
-        [data-theme="blood"] .feature-button,
-        [data-theme="blood"] .submit-button {
-            background: linear-gradient(135deg, #8b6914, #b8860b, #daa520) !important;
-            color: #fff8dc !important;
-            border: 1px solid #b8860b !important;
+        [data-theme="dark"] .feature-button,
+        [data-theme="dark"] .submit-button {
+            background: linear-gradient(135deg, #4b0082, #8a2be2, #9370db) !important;
+            color: #e6e6fa !important;
+            border: 1px solid #8a2be2 !important;
         }
 
-        [data-theme="blood"] .activity-name,
-        [data-theme="blood"] .activity-points,
-        [data-theme="blood"] .honor-title,
-        [data-theme="blood"] .honor-cost,
-        [data-theme="blood"] .member-rank {
-            color: #ffebcd !important;
+        [data-theme="dark"] .activity-name,
+        [data-theme="dark"] .activity-points,
+        [data-theme="dark"] .honor-title,
+        [data-theme="dark"] .honor-cost,
+        [data-theme="dark"] .member-rank {
+            color: #d8bfd8 !important;
         }
 
-        [data-theme="blood"] .footer {
-            color: #b8860b !important;
+        [data-theme="dark"] .footer {
+            color: #9370db !important;
         }
 
-        [data-theme="blood"] .activity-item {
-            background: rgba(42, 26, 0, 0.7) !important;
-            border-left: 4px solid #b8860b !important;
-            color: #fff8dc !important;
+        [data-theme="dark"] .activity-item {
+            background: rgba(42, 42, 62, 0.9) !important;
+            border-left: 4px solid #8a2be2 !important;
+            color: #e6e6fa !important;
         }
 
-        [data-theme="blood"] .activity-points {
-            background: rgba(184, 134, 11, 0.2) !important;
-            border: 1px solid rgba(184, 134, 11, 0.5) !important;
-            color: #ffd700 !important;
+        [data-theme="dark"] .activity-points {
+            background: rgba(139, 107, 226, 0.2) !important;
+            border: 1px solid rgba(139, 107, 226, 0.5) !important;
+            color: #9370db !important;
         }
 
-        [data-theme="blood"] .honor-card {
-            background: rgba(42, 26, 0, 0.7) !important;
-            color: #fff8dc !important;
+        [data-theme="dark"] .honor-card {
+            background: rgba(42, 42, 62, 0.9) !important;
+            color: #e6e6fa !important;
         }
 
-        [data-theme="blood"] .member-rank {
-            color: #ffd700 !important;
+        [data-theme="dark"] .member-rank {
+            color: #9370db !important;
         }
 
-        [data-theme="blood"] .member-card.vacant .member-name {
-            color: #b8860b !important;
-            -webkit-text-fill-color: #b8860b !important;
+        [data-theme="dark"] .member-card.vacant .member-name {
+            color: #9370db !important;
+            -webkit-text-fill-color: #9370db !important;
         }
 
-        [data-theme="blood"] .rank-icon,
-        [data-theme="blood"] .feature-icon,
-        [data-theme="blood"] .rule-icon,
-        [data-theme="blood"] .member-avatar {
-            background: linear-gradient(45deg, #8b6914, #b8860b, #ffd700) !important;
-            border: 2px solid rgba(255, 215, 0, 0.6) !important;
-            box-shadow: 0 0 15px rgba(184, 134, 11, 0.4);
+        [data-theme="dark"] .rank-icon,
+        [data-theme="dark"] .feature-icon,
+        [data-theme="dark"] .rule-icon,
+        [data-theme="dark"] .member-avatar {
+            background: linear-gradient(45deg, #4b0082, #8a2be2, #9370db) !important;
+            border: 2px solid rgba(139, 107, 226, 0.6) !important;
+            box-shadow: 0 0 15px rgba(139, 107, 226, 0.4);
         }
 
-        [data-theme="blood"] .logo-icon {
-            background: linear-gradient(45deg, #8b6914, #b8860b, #ffd700) !important;
-            border: 2px solid rgba(255, 215, 0, 0.6) !important;
-            box-shadow: 0 0 15px rgba(184, 134, 11, 0.4);
+        [data-theme="dark"] .logo-icon {
+            background: linear-gradient(45deg, #4b0082, #8a2be2, #9370db) !important;
+            border: 2px solid rgba(139, 107, 226, 0.6) !important;
+            box-shadow: 0 0 15px rgba(139, 107, 226, 0.4);
         }
 
-        [data-theme="blood"] .progress-bar {
-            background: linear-gradient(90deg, #8b6914, #b8860b, #ffd700) !important;
-            box-shadow: 0 0 10px rgba(184, 134, 11, 0.3);
+        [data-theme="dark"] .progress-bar {
+            background: linear-gradient(90deg, #4b0082, #8a2be2, #9370db) !important;
+            box-shadow: 0 0 10px rgba(139, 107, 226, 0.3);
         }
 
-        [data-theme="blood"] .rank-icon,
-        [data-theme="blood"] .feature-icon,
-        [data-theme="blood"] .rule-icon,
-        [data-theme="blood"] .member-avatar,
-        [data-theme="blood"] .logo-icon {
-            animation: goldPulse 3s infinite;
+        [data-theme="dark"] .rank-icon,
+        [data-theme="dark"] .feature-icon,
+        [data-theme="dark"] .rule-icon,
+        [data-theme="dark"] .member-avatar,
+        [data-theme="dark"] .logo-icon {
+            animation: purplePulse 3s infinite;
         }
 
-        @keyframes goldPulse {
+        @keyframes purplePulse {
             0% { 
                 transform: scale(1); 
-                box-shadow: 0 0 0 0 rgba(184, 134, 11, 0.4);
+                box-shadow: 0 0 0 0 rgba(139, 107, 226, 0.4);
             }
             70% { 
                 transform: scale(1.05); 
-                box-shadow: 0 0 0 10px rgba(184, 134, 11, 0);
+                box-shadow: 0 0 0 10px rgba(139, 107, 226, 0);
             }
             100% { 
                 transform: scale(1); 
-                box-shadow: 0 0 0 0 rgba(184, 134, 11, 0);
+                box-shadow: 0 0 0 0 rgba(139, 107, 226, 0);
             }
         }
 
-        [data-theme="blood"] .rank-icon i,
-        [data-theme="blood"] .feature-icon i,
-        [data-theme="blood"] .rule-icon i,
-        [data-theme="blood"] .member-avatar i,
-        [data-theme="blood"] .logo-icon i {
+        [data-theme="dark"] .rank-icon i,
+        [data-theme="dark"] .feature-icon i,
+        [data-theme="dark"] .rule-icon i,
+        [data-theme="dark"] .member-avatar i,
+        [data-theme="dark"] .logo-icon i {
             color: rgba(255, 255, 255, 0.9) !important;
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+            text-shadow: 0 0 10px rgba(139, 107, 226, 0.5);
         }
 
-        [data-theme="blood"] .navbar {
-            background: rgba(42, 26, 0, 0.95) !important;
+        [data-theme="dark"] .navbar {
+            background: rgba(26, 26, 46, 0.95) !important;
             backdrop-filter: blur(15px);
-            border-bottom: 1px solid rgba(184, 134, 11, 0.5) !important;
+            border-bottom: 1px solid rgba(139, 107, 226, 0.5) !important;
         }
 
-        [data-theme="blood"] .nav-link {
-            background: rgba(58, 38, 0, 0) !important;
-            border: 1px solid rgba(184, 134, 11, 0) !important;
-            color: #fff8dc !important;
+        [data-theme="dark"] .nav-link {
+            background: rgba(58, 58, 78, 0) !important;
+            border: 1px solid rgba(139, 107, 226, 0) !important;
+            color: #e6e6fa !important;
             transition: var(--transition);
         }
 
-        [data-theme="blood"] .nav-link:hover {
-            background: rgba(58, 38, 0, 0.9) !important;
-            border: 1px solid rgba(255, 215, 0, 0.7) !important;
-            color: #fff8dc !important;
+        [data-theme="dark"] .nav-link:hover {
+            background: rgba(58, 58, 78, 0.9) !important;
+            border: 1px solid rgba(139, 107, 226, 0.7) !important;
+            color: #e6e6fa !important;
             transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(184, 134, 11, 0.4);
+            box-shadow: 0 5px 20px rgba(139, 107, 226, 0.4);
         }
 
-        [data-theme="blood"] .nav-link.active {
-            background: linear-gradient(135deg, rgba(184, 134, 11, 0.4), rgba(139, 105, 20, 0.3)) !important;
-            border: 1px solid var(--accent-color) !important;
-            color: #fff8dc !important;
-            box-shadow: 0 0 25px rgba(184, 134, 11, 0.6), 0 5px 15px rgba(184, 134, 11, 0.4);
+        [data-theme="dark"] .nav-link.active {
+            background: linear-gradient(135deg, rgba(139, 107, 226, 0.4), rgba(107, 91, 154, 0.3)) !important;
+            border: 1px solid var(--purple) !important;
+            color: #e6e6fa !important;
+            box-shadow: 0 0 25px rgba(139, 107, 226, 0.6), 0 5px 15px rgba(139, 107, 226, 0.4);
             position: relative;
         }
 
-        [data-theme="blood"] .nav-link.active::before {
+        [data-theme="dark"] .nav-link.active::before {
             content: '';
             position: absolute;
             top: -2px;
             left: -2px;
             right: -2px;
             bottom: -2px;
-            background: linear-gradient(45deg, #b8860b, #8b6914, #b8860b);
+            background: linear-gradient(45deg, #8a2be2, #6b5b9a, #8a2be2);
             border-radius: 25px;
             z-index: -1;
             opacity: 0.7;
-            animation: goldGlow 2s ease-in-out infinite alternate;
+            animation: purpleGlow 2s ease-in-out infinite alternate;
         }
 
-        @keyframes goldGlow {
+        @keyframes purpleGlow {
             0% {
                 opacity: 0.5;
-                box-shadow: 0 0 15px rgba(184, 134, 11, 0.5);
+                box-shadow: 0 0 15px rgba(139, 107, 226, 0.5);
             }
             100% {
                 opacity: 0.9;
-                box-shadow: 0 0 25px rgba(184, 134, 11, 0.9);
+                box-shadow: 0 0 25px rgba(139, 107, 226, 0.9);
             }
         }
 
-        [data-theme="blood"] .bg-circle {
-            background: rgba(184, 134, 11, 0.05);
-            animation: goldFloat 20s infinite linear;
+        [data-theme="dark"] .bg-circle {
+            background: rgba(139, 107, 226, 0.05);
+            animation: purpleFloat 20s infinite linear;
         }
 
-        @keyframes goldFloat {
+        @keyframes purpleFloat {
             0% { transform: translate(0, 0) rotate(0deg); opacity: 0.3; }
             25% { transform: translate(20px, 30px) rotate(90deg); opacity: 0.5; }
             50% { transform: translate(40px, 10px) rotate(180deg); opacity: 0.2; }
@@ -1038,28 +1050,101 @@
             100% { transform: translate(0, 0) rotate(360deg); opacity: 0.3; }
         }
 
-        [data-theme="blood"] #webgl-canvas {
-            filter: sepia(0.3) hue-rotate(10deg) saturate(1.3);
+        [data-theme="dark"] #webgl-canvas {
+            filter: hue-rotate(120deg) saturate(1.5) brightness(0.7);
         }
 
-        [data-theme="blood"] .member-card:not(.vacant) {
+        [data-theme="dark"] .member-card:not(.vacant) {
             background: linear-gradient(
                 135deg,
-                rgba(42, 26, 0, 0.9),
-                rgba(58, 38, 0, 0.7)
+                rgba(42, 42, 62, 0.9),
+                rgba(58, 58, 78, 0.7)
             ) !important;
-            border: 1px solid rgba(184, 134, 11, 0.6) !important;
+            border: 1px solid rgba(139, 107, 226, 0.6) !important;
             box-shadow: 
-                0 8px 32px rgba(184, 134, 11, 0.3),
-                0 0 15px rgba(255, 215, 0, 0.2) !important;
+                0 8px 32px rgba(139, 107, 226, 0.3),
+                0 0 15px rgba(139, 107, 226, 0.2) !important;
         }
 
-        [data-theme="blood"] .member-card.vacant {
-            background: rgba(42, 26, 0, 0.4) !important;
-            border: 2px dashed rgba(184, 134, 11, 0.4) !important;
+        [data-theme="dark"] .member-card.vacant {
+            background: rgba(42, 42, 62, 0.4) !important;
+            border: 2px dashed rgba(139, 107, 226, 0.4) !important;
         }
 
         /* ЭФФЕКТЫ ПОДСВЕТКИ */
+
+        /* Светлая тема */
+        .feature-card:hover,
+        .rank-card:hover,
+        .rule-card:hover,
+        .member-card:not(.vacant):hover,
+        .honor-card:hover {
+            border-color: var(--purple) !important;
+            box-shadow: 
+                0 0 25px rgba(139, 107, 226, 0.3),
+                0 15px 40px rgba(139, 107, 226, 0.1) !important;
+            transform: translateY(-15px) scale(1.03);
+            background: rgba(255, 255, 255, 1) !important;
+        }
+
+        .activity-item:hover {
+            border-left-color: var(--purple) !important;
+            box-shadow: 
+                5px 0 20px rgba(139, 107, 226, 0.2),
+                0 8px 25px rgba(139, 107, 226, 0.1) !important;
+            transform: translateX(15px) scale(1.02);
+            background: rgba(255, 255, 255, 1) !important;
+        }
+
+        .feature-card:hover h3,
+        .rank-card:hover .rank-title,
+        .rule-card:hover .rule-title,
+        .member-card:not(.vacant):hover .member-name {
+            text-shadow: 0 0 15px rgba(139, 107, 226, 0.5);
+            background: linear-gradient(45deg, #8a2be2, #9370db, #4b0082) !important;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+        }
+
+        .activity-item:hover .activity-name,
+        .activity-item:hover .activity-points {
+            text-shadow: 0 0 10px rgba(139, 107, 226, 0.4);
+        }
+
+        .activity-item:hover .activity-points {
+            background: rgba(139, 107, 226, 0.2) !important;
+            border-color: var(--purple) !important;
+            transform: scale(1.15);
+            box-shadow: 0 0 15px rgba(139, 107, 226, 0.2) !important;
+        }
+
+        .feature-card:hover .feature-icon,
+        .rank-card:hover .rank-icon,
+        .rule-card:hover .rule-icon,
+        .member-card:not(.vacant):hover .member-avatar {
+            background: linear-gradient(45deg, #8a2be2, #9370db, #4b0082) !important;
+            border-color: var(--purple) !important;
+            box-shadow: 
+                0 0 25px rgba(139, 107, 226, 0.4),
+                inset 0 0 20px rgba(139, 107, 226, 0.1) !important;
+            animation: pulseGlow 2s infinite;
+        }
+
+        .rank-card:hover .rank-points,
+        .honor-card:hover .honor-cost {
+            text-shadow: 0 0 12px rgba(139, 107, 226, 0.4);
+            transform: scale(1.05);
+        }
+
+        .rank-card:hover .progress-bar {
+            box-shadow: 0 0 12px rgba(139, 107, 226, 0.3) !important;
+        }
+
+        .member-card.vacant:hover {
+            border-color: rgba(139, 107, 226, 0.4) !important;
+            box-shadow: 0 0 20px rgba(139, 107, 226, 0.15) !important;
+            transform: translateY(-8px);
+        }
 
         /* Темная тема */
         [data-theme="dark"] .feature-card:hover,
@@ -1067,194 +1152,121 @@
         [data-theme="dark"] .rule-card:hover,
         [data-theme="dark"] .member-card:not(.vacant):hover,
         [data-theme="dark"] .honor-card:hover {
-            border-color: var(--gold) !important;
+            border-color: var(--purple) !important;
             box-shadow: 
-                0 0 25px rgba(255, 215, 0, 0.4),
-                0 15px 40px rgba(0, 0, 0, 0.5) !important;
-            transform: translateY(-15px) scale(1.03);
-            background: rgba(255, 255, 255, 0.1) !important;
+                0 0 35px rgba(139, 107, 226, 0.5),
+                0 20px 50px rgba(107, 91, 154, 0.4) !important;
+            transform: translateY(-18px) scale(1.04);
+            background: linear-gradient(
+                135deg,
+                rgba(58, 58, 78, 0.95),
+                rgba(74, 74, 94, 0.85)
+            ) !important;
         }
 
         [data-theme="dark"] .activity-item:hover {
-            border-left-color: var(--gold) !important;
+            border-left-color: var(--purple) !important;
             box-shadow: 
-                5px 0 20px rgba(255, 215, 0, 0.3),
-                0 8px 25px rgba(0, 0, 0, 0.4) !important;
-            transform: translateX(15px) scale(1.02);
-            background: rgba(255, 255, 255, 0.1) !important;
+                5px 0 25px rgba(139, 107, 226, 0.3),
+                0 10px 35px rgba(107, 91, 154, 0.3) !important;
+            transform: translateX(18px) scale(1.03);
+            background: linear-gradient(
+                135deg,
+                rgba(58, 58, 78, 0.9),
+                rgba(74, 74, 94, 0.8)
+            ) !important;
         }
 
         [data-theme="dark"] .feature-card:hover h3,
         [data-theme="dark"] .rank-card:hover .rank-title,
         [data-theme="dark"] .rule-card:hover .rule-title,
-        [data-theme="dark"] .member-card:not(.vacant):hover .member-name {
-            text-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
-            background: linear-gradient(45deg, #ffd700, #ffed4e, #ffcc00) !important;
+        [data-theme="dark"] .member-card:not(.vacant):hover .member-name,
+        [data-theme="dark"] .member-card:not(.vacant):hover .member-rank {
+            text-shadow: 0 0 20px rgba(139, 107, 226, 0.6);
+            background: linear-gradient(45deg, #e6e6fa, #9370db, #8a2be2) !important;
             -webkit-background-clip: text !important;
             -webkit-text-fill-color: transparent !important;
         }
 
         [data-theme="dark"] .activity-item:hover .activity-name,
         [data-theme="dark"] .activity-item:hover .activity-points {
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+            text-shadow: 0 0 12px rgba(139, 107, 226, 0.5);
         }
 
         [data-theme="dark"] .activity-item:hover .activity-points {
-            background: rgba(255, 215, 0, 0.3) !important;
-            border-color: var(--gold) !important;
-            transform: scale(1.15);
-            box-shadow: 0 0 15px rgba(255, 215, 0, 0.3) !important;
+            background: linear-gradient(135deg, #4b0082, #8a2be2) !important;
+            border-color: var(--purple) !important;
+            transform: scale(1.2);
+            box-shadow: 0 0 20px rgba(139, 107, 226, 0.4) !important;
+            color: #e6e6fa !important;
         }
 
         [data-theme="dark"] .feature-card:hover .feature-icon,
         [data-theme="dark"] .rank-card:hover .rank-icon,
         [data-theme="dark"] .rule-card:hover .rule-icon,
         [data-theme="dark"] .member-card:not(.vacant):hover .member-avatar {
-            background: linear-gradient(45deg, #ffcc00, #ffd700, #ffed4e) !important;
-            border-color: var(--gold) !important;
+            background: linear-gradient(45deg, #8a2be2, #9370db, #e6e6fa) !important;
+            border-color: var(--purple) !important;
             box-shadow: 
-                0 0 25px rgba(255, 215, 0, 0.5),
-                inset 0 0 20px rgba(255, 215, 0, 0.2) !important;
-            animation: pulseGlow 2s infinite;
+                0 0 35px rgba(139, 107, 226, 0.6),
+                inset 0 0 25px rgba(139, 107, 226, 0.2) !important;
+            animation: purplePulseGlow 1.5s infinite;
         }
 
         [data-theme="dark"] .rank-card:hover .rank-points,
         [data-theme="dark"] .honor-card:hover .honor-cost {
-            text-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
-            transform: scale(1.05);
+            text-shadow: 0 0 15px rgba(139, 107, 226, 0.7);
+            transform: scale(1.08);
+            color: #e6e6fa !important;
         }
 
         [data-theme="dark"] .rank-card:hover .progress-bar {
-            box-shadow: 0 0 12px rgba(255, 215, 0, 0.4) !important;
+            background: linear-gradient(90deg, #8a2be2, #9370db, #e6e6fa) !important;
+            box-shadow: 0 0 20px rgba(139, 107, 226, 0.4) !important;
         }
 
         [data-theme="dark"] .member-card.vacant:hover {
-            border-color: rgba(255, 215, 0, 0.5) !important;
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.25) !important;
-            transform: translateY(-8px);
-        }
-
-        /* Кровавая тема */
-        [data-theme="blood"] .feature-card:hover,
-        [data-theme="blood"] .rank-card:hover,
-        [data-theme="blood"] .rule-card:hover,
-        [data-theme="blood"] .member-card:not(.vacant):hover,
-        [data-theme="blood"] .honor-card:hover {
-            border-color: var(--gold) !important;
-            box-shadow: 
-                0 0 35px rgba(255, 215, 0, 0.6),
-                0 20px 50px rgba(139, 107, 0, 0.5) !important;
-            transform: translateY(-18px) scale(1.04);
-            background: linear-gradient(
-                135deg,
-                rgba(58, 38, 0, 0.95),
-                rgba(74, 50, 0, 0.85)
-            ) !important;
-        }
-
-        [data-theme="blood"] .activity-item:hover {
-            border-left-color: var(--gold) !important;
-            box-shadow: 
-                5px 0 25px rgba(255, 215, 0, 0.4),
-                0 10px 35px rgba(139, 107, 0, 0.4) !important;
-            transform: translateX(18px) scale(1.03);
-            background: linear-gradient(
-                135deg,
-                rgba(58, 38, 0, 0.9),
-                rgba(74, 50, 0, 0.8)
-            ) !important;
-        }
-
-        [data-theme="blood"] .feature-card:hover h3,
-        [data-theme="blood"] .rank-card:hover .rank-title,
-        [data-theme="blood"] .rule-card:hover .rule-title,
-        [data-theme="blood"] .member-card:not(.vacant):hover .member-name,
-        [data-theme="blood"] .member-card:not(.vacant):hover .member-rank {
-            text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
-            background: linear-gradient(45deg, #fff8dc, #ffd700, #ffcc00) !important;
-            -webkit-background-clip: text !important;
-            -webkit-text-fill-color: transparent !important;
-        }
-
-        [data-theme="blood"] .activity-item:hover .activity-name,
-        [data-theme="blood"] .activity-item:hover .activity-points {
-            text-shadow: 0 0 12px rgba(255, 215, 0, 0.7);
-        }
-
-        [data-theme="blood"] .activity-item:hover .activity-points {
-            background: linear-gradient(135deg, #8b6914, #b8860b) !important;
-            border-color: var(--gold) !important;
-            transform: scale(1.2);
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5) !important;
-            color: #fff8dc !important;
-        }
-
-        [data-theme="blood"] .feature-card:hover .feature-icon,
-        [data-theme="blood"] .rank-card:hover .rank-icon,
-        [data-theme="blood"] .rule-card:hover .rule-icon,
-        [data-theme="blood"] .member-card:not(.vacant):hover .member-avatar {
-            background: linear-gradient(45deg, #daa520, #ffd700, #ffed4e) !important;
-            border-color: var(--gold) !important;
-            box-shadow: 
-                0 0 35px rgba(255, 215, 0, 0.7),
-                inset 0 0 25px rgba(255, 215, 0, 0.3) !important;
-            animation: goldPulseGlow 1.5s infinite;
-        }
-
-        [data-theme="blood"] .rank-card:hover .rank-points,
-        [data-theme="blood"] .honor-card:hover .honor-cost {
-            text-shadow: 0 0 15px rgba(255, 215, 0, 0.9);
-            transform: scale(1.08);
-            color: #ffed4e !important;
-        }
-
-        [data-theme="blood"] .rank-card:hover .progress-bar {
-            background: linear-gradient(90deg, #daa520, #ffd700, #ffed4e) !important;
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5) !important;
-        }
-
-        [data-theme="blood"] .member-card.vacant:hover {
-            border-color: rgba(255, 215, 0, 0.7) !important;
-            box-shadow: 0 0 25px rgba(255, 215, 0, 0.35) !important;
+            border-color: rgba(139, 107, 226, 0.6) !important;
+            box-shadow: 0 0 25px rgba(139, 107, 226, 0.25) !important;
             transform: translateY(-10px);
-            background: rgba(58, 38, 0, 0.7) !important;
+            background: rgba(58, 58, 78, 0.7) !important;
         }
 
         /* Кнопки навигации */
-        [data-theme="dark"] .nav-link:hover {
-            border-color: var(--gold) !important;
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4) !important;
-            text-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
-            background: rgba(255, 215, 0, 0.2) !important;
+        .nav-link:hover {
+            border-color: var(--purple) !important;
+            box-shadow: 0 0 20px rgba(139, 107, 226, 0.3) !important;
+            text-shadow: 0 0 8px rgba(139, 107, 226, 0.5);
+            background: rgba(139, 107, 226, 0.15) !important;
         }
 
-        [data-theme="blood"] .nav-link:hover {
-            border-color: var(--gold) !important;
-            box-shadow: 0 0 25px rgba(255, 215, 0, 0.5) !important;
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
-            background: linear-gradient(135deg, rgba(184, 134, 11, 0.4), rgba(139, 105, 20, 0.3)) !important;
+        [data-theme="dark"] .nav-link:hover {
+            border-color: var(--purple) !important;
+            box-shadow: 0 0 25px rgba(139, 107, 226, 0.4) !important;
+            text-shadow: 0 0 10px rgba(139, 107, 226, 0.6);
+            background: linear-gradient(135deg, rgba(139, 107, 226, 0.3), rgba(107, 91, 154, 0.2)) !important;
         }
 
         /* Кнопки действий */
-        [data-theme="dark"] .feature-button:hover,
-        [data-theme="dark"] .booking-button:hover {
-            border-color: var(--gold) !important;
+        .feature-button:hover,
+        .booking-button:hover {
+            border-color: var(--purple) !important;
             box-shadow: 
-                0 0 20px rgba(255, 215, 0, 0.5),
-                0 8px 25px rgba(0, 0, 0, 0.4) !important;
-            text-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
-            background: rgba(255, 215, 0, 0.3) !important;
+                0 0 20px rgba(139, 107, 226, 0.4),
+                0 8px 25px rgba(139, 107, 226, 0.1) !important;
+            text-shadow: 0 0 8px rgba(139, 107, 226, 0.5);
+            background: rgba(139, 107, 226, 0.2) !important;
             transform: translateY(-5px);
         }
 
-        [data-theme="blood"] .feature-button:hover,
-        [data-theme="blood"] .booking-button:hover {
-            border-color: var(--gold) !important;
+        [data-theme="dark"] .feature-button:hover,
+        [data-theme="dark"] .booking-button:hover {
+            border-color: var(--purple) !important;
             box-shadow: 
-                0 0 25px rgba(255, 215, 0, 0.6),
-                0 10px 30px rgba(139, 107, 0, 0.5) !important;
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.9);
-            background: linear-gradient(135deg, #daa520, #ffd700, #ffed4e) !important;
+                0 0 25px rgba(139, 107, 226, 0.5),
+                0 10px 30px rgba(107, 91, 154, 0.4) !important;
+            text-shadow: 0 0 10px rgba(139, 107, 226, 0.7);
+            background: linear-gradient(135deg, #8a2be2, #9370db, #e6e6fa) !important;
             transform: translateY(-5px);
         }
 
@@ -1263,50 +1275,50 @@
             0% { 
                 transform: scale(1); 
                 box-shadow: 
-                    0 0 20px rgba(255, 215, 0, 0.4),
-                    inset 0 0 15px rgba(255, 215, 0, 0.2);
+                    0 0 20px rgba(139, 107, 226, 0.3),
+                    inset 0 0 15px rgba(139, 107, 226, 0.1);
             }
             50% { 
                 transform: scale(1.07); 
                 box-shadow: 
-                    0 0 30px rgba(255, 215, 0, 0.6),
-                    inset 0 0 20px rgba(255, 215, 0, 0.3);
+                    0 0 30px rgba(139, 107, 226, 0.5),
+                    inset 0 0 20px rgba(139, 107, 226, 0.2);
             }
             100% { 
                 transform: scale(1); 
                 box-shadow: 
-                    0 0 20px rgba(255, 215, 0, 0.4),
-                    inset 0 0 15px rgba(255, 215, 0, 0.2);
+                    0 0 20px rgba(139, 107, 226, 0.3),
+                    inset 0 0 15px rgba(139, 107, 226, 0.1);
             }
         }
 
-        @keyframes goldPulseGlow {
+        @keyframes purplePulseGlow {
             0% { 
                 transform: scale(1); 
                 box-shadow: 
-                    0 0 25px rgba(255, 215, 0, 0.5),
-                    inset 0 0 20px rgba(255, 215, 0, 0.2);
+                    0 0 25px rgba(139, 107, 226, 0.4),
+                    inset 0 0 20px rgba(139, 107, 226, 0.1);
             }
             50% { 
                 transform: scale(1.08); 
                 box-shadow: 
-                    0 0 40px rgba(255, 215, 0, 0.8),
-                    inset 0 0 25px rgba(255, 215, 0, 0.4);
+                    0 0 40px rgba(139, 107, 226, 0.6),
+                    inset 0 0 25px rgba(139, 107, 226, 0.3);
             }
             100% { 
                 transform: scale(1); 
                 box-shadow: 
-                    0 0 25px rgba(255, 215, 0, 0.5),
-                    inset 0 0 20px rgba(255, 215, 0, 0.2);
+                    0 0 25px rgba(139, 107, 226, 0.4),
+                    inset 0 0 20px rgba(139, 107, 226, 0.1);
             }
         }
 
         /* Анимации логотипа */
         .logo:hover .logo-icon {
-            animation: sunRotate 4s infinite linear;
+            animation: moonRotate 4s infinite linear;
         }
 
-        @keyframes sunRotate {
+        @keyframes moonRotate {
             from {
                 transform: rotate(0deg);
             }
@@ -1316,19 +1328,19 @@
         }
 
         .logo:hover .logo-icon i {
-            animation: sunGlow 3s infinite alternate ease-in-out;
+            animation: moonGlow 3s infinite alternate ease-in-out;
         }
 
-        @keyframes sunGlow {
+        @keyframes moonGlow {
             0% {
                 transform: scale(0.95);
                 opacity: 0.9;
-                text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+                text-shadow: 0 0 5px rgba(139, 107, 226, 0.4);
             }
             100% {
                 transform: scale(1.05);
                 opacity: 1;
-                text-shadow: 0 0 15px rgba(255, 215, 0, 0.9);
+                text-shadow: 0 0 15px rgba(139, 107, 226, 0.7);
             }
         }
 
@@ -1374,12 +1386,12 @@
             }
             
             .member-card:not(.vacant):hover,
-            [data-theme="blood"] .member-card:not(.vacant):hover {
+            [data-theme="dark"] .member-card:not(.vacant):hover {
                 transform: translateY(-8px) scale(1.01) !important;
             }
             
             .member-card.vacant:hover,
-            [data-theme="blood"] .member-card.vacant:hover {
+            [data-theme="dark"] .member-card.vacant:hover {
                 transform: translateY(-3px) scale(1.01) !important;
             }
             
@@ -1452,7 +1464,7 @@
         .page-header h1 {
             font-size: 3em;
             margin-bottom: 20px;
-            background: linear-gradient(45deg, var(--white), var(--light));
+            background: linear-gradient(45deg, var(--dark-purple), var(--purple));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -1477,8 +1489,8 @@
             right: 10px;
             width: 22px;
             height: 22px;
-            background: linear-gradient(135deg, var(--gold), #ffed4e);
-            color: #000000;
+            background: linear-gradient(135deg, var(--purple), #9370db);
+            color: #ffffff;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -1486,58 +1498,58 @@
             font-size: 12px;
             font-weight: bold;
             box-shadow: 
-                0 0 10px rgba(255, 215, 0, 0.5),
+                0 0 10px rgba(139, 107, 226, 0.5),
                 0 2px 4px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 215, 0, 0.7);
+            border: 1px solid rgba(139, 107, 226, 0.7);
             z-index: 10;
             transition: var(--transition);
         }
 
         .member-card:not(.vacant):hover::after {
-            background: linear-gradient(135deg, #ffed4e, var(--gold));
+            background: linear-gradient(135deg, #9370db, var(--purple));
             transform: scale(1.1);
             box-shadow: 
-                0 0 15px rgba(255, 215, 0, 0.7),
+                0 0 15px rgba(139, 107, 226, 0.7),
                 0 3px 6px rgba(0, 0, 0, 0.4);
-            border: 1px solid #ffed4e;
+            border: 1px solid #9370db;
         }
 
         .member-card:not(.vacant):hover .member-avatar {
             transform: scale(1.1);
-            box-shadow: 0 0 25px rgba(255, 215, 0, 0.6) !important;
+            box-shadow: 0 0 25px rgba(139, 107, 226, 0.5) !important;
         }
 
         .member-card:not(.vacant):hover .member-name {
-            background: linear-gradient(45deg, var(--gold), #ffed4e, var(--gold)) !important;
+            background: linear-gradient(45deg, var(--purple), #9370db, var(--purple)) !important;
             -webkit-background-clip: text !important;
             -webkit-text-fill-color: transparent !important;
         }
 
         .member-card:not(.vacant):hover .member-rank {
-            color: var(--gold) !important;
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.4) !important;
+            color: var(--purple) !important;
+            text-shadow: 0 0 10px rgba(139, 107, 226, 0.3) !important;
         }
 
         .member-card.vacant:hover {
             transform: translateY(-5px) scale(1.02);
-            background: rgba(255, 255, 255, 0.1) !important;
-            border: 2px dashed var(--gold) !important;
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3) !important;
+            background: rgba(255, 255, 255, 0.95) !important;
+            border: 2px dashed var(--purple) !important;
+            box-shadow: 0 0 20px rgba(139, 107, 226, 0.2) !important;
         }
 
-        /* Кровавая тема для невакантных карточек */
-        [data-theme="blood"] .member-card:not(.vacant)::after {
-            background: linear-gradient(135deg, #FFFFFF, #FFDDDD) !important;
-            color: #8b6b00 !important;
+        /* Темная тема для невакантных карточек */
+        [data-theme="dark"] .member-card:not(.vacant)::after {
+            background: linear-gradient(135deg, #FFFFFF, #E6E6FA) !important;
+            color: #6b5b9a !important;
             border: 1px solid rgba(255, 255, 255, 0.7);
             box-shadow: 
                 0 0 10px rgba(255, 255, 255, 0.5),
                 0 2px 4px rgba(0, 0, 0, 0.3);
         }
 
-        [data-theme="blood"] .member-card:not(.vacant):hover::after {
+        [data-theme="dark"] .member-card:not(.vacant):hover::after {
             background: linear-gradient(135deg, #FFFFFF, #FFFFFF) !important;
-            color: #605100 !important;
+            color: #8a2be2 !important;
             transform: scale(1.1);
             box-shadow: 
                 0 0 15px rgba(255, 255, 255, 0.7),
@@ -1545,42 +1557,42 @@
             border: 1px solid #FFFFFF;
         }
 
-        [data-theme="blood"] .member-card:not(.vacant):hover {
+        [data-theme="dark"] .member-card:not(.vacant):hover {
             background: linear-gradient(
                 135deg,
-                rgba(42, 36, 0, 0.9),
-                rgba(60, 49, 0, 0.7)
+                rgba(42, 42, 62, 0.95),
+                rgba(60, 60, 80, 0.85)
             ) !important;
-            border: 1px solid #dcbe14 !important;
+            border: 1px solid #a45deb !important;
             transform: translateY(-15px) scale(1.02) !important;
             z-index: 100 !important;
             box-shadow: 
-                0 20px 50px rgba(139, 102, 0, 0.5),
-                0 0 30px rgba(220, 190, 20, 0.4) !important;
+                0 20px 50px rgba(139, 107, 226, 0.4),
+                0 0 30px rgba(164, 93, 235, 0.3) !important;
         }
 
-        [data-theme="blood"] .member-card:not(.vacant):hover .member-avatar {
+        [data-theme="dark"] .member-card:not(.vacant):hover .member-avatar {
             box-shadow: 
-                0 0 25px rgba(139, 102, 0, 0.6),
-                0 0 15px rgba(220, 190, 20, 0.5) !important;
-            border-color: rgba(220, 190, 20, 0.8) !important;
+                0 0 25px rgba(139, 107, 226, 0.5),
+                0 0 15px rgba(164, 93, 235, 0.4) !important;
+            border-color: rgba(164, 93, 235, 0.8) !important;
         }
 
-        [data-theme="blood"] .member-card:not(.vacant):hover .member-name {
-            background: linear-gradient(45deg, #dcad14, #ffe366, #dcb714) !important;
+        [data-theme="dark"] .member-card:not(.vacant):hover .member-name {
+            background: linear-gradient(45deg, #a45deb, #c9a8ff, #a45deb) !important;
             -webkit-background-clip: text !important;
             -webkit-text-fill-color: transparent !important;
         }
 
-        [data-theme="blood"] .member-card:not(.vacant):hover .member-rank {
-            color: #fff599 !important;
-            text-shadow: 0 0 10px rgba(139, 118, 0, 0.5) !important;
+        [data-theme="dark"] .member-card:not(.vacant):hover .member-rank {
+            color: #e6e6fa !important;
+            text-shadow: 0 0 10px rgba(164, 93, 235, 0.4) !important;
         }
 
-        [data-theme="blood"] .member-card.vacant:hover {
-            background: rgba(26, 22, 0, 0.6) !important;
-            border: 2px dashed rgba(220, 190, 20, 0.8) !important;
-            box-shadow: 0 0 20px rgba(220, 207, 20, 0.3) !important;
+        [data-theme="dark"] .member-card.vacant:hover {
+            background: rgba(42, 42, 62, 0.6) !important;
+            border: 2px dashed rgba(164, 93, 235, 0.8) !important;
+            box-shadow: 0 0 20px rgba(164, 93, 235, 0.2) !important;
             transform: translateY(-5px) scale(1.02);
         }
     </style>
@@ -1592,9 +1604,9 @@
         <div class="nav-container">
             <div class="logo" onclick="showSection('main')">
                 <div class="logo-icon">
-                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
                 </div>
-                ДЫХАНИЕ СВЕТА
+                ДЫХАНИЕ ШИНИГАМИ
             </div>
             
             <div class="nav-links">
@@ -1613,10 +1625,10 @@
             </div>
             
             <div class="theme-switcher">
-                <button class="theme-btn active" data-theme="dark">
+                <button class="theme-btn active" data-theme="light">
                     <i class="fas fa-sun"></i>
                 </button>
-                <button class="theme-btn" data-theme="blood">
+                <button class="theme-btn" data-theme="dark">
                     <i class="fas fa-moon"></i>
                 </button>
             </div>
@@ -1626,9 +1638,9 @@
     <div class="container">
         <div id="main" class="section active">
             <section class="hero">
-                <h1>ДЫХАНИЕ СВЕТА</h1>
-                <p>Дыхание Света (光ひかりの呼こ吸きゅう Hikari no kokyū) — одно из производных дыханий, основанное на принципах дыхания солнца.</p>
-                <p>Техники Дыхания Света сосредоточены на использовании прямолинейных и стремительных движений, которые помогают мгновенно достигать цели и ослеплять противника.</p>
+                <h1>ДЫХАНИЕ ШИНИГАМИ</h1>
+                <p>Дыхание Шинигами (死神しにがみの呼こ吸きゅう Shinigami no kokyū) — одно из производных дыханий, основанное на принципах дыхания луны.</p>
+                <p>Техники Дыхания Шинигами сосредоточены на использовании изящных и таинственных движений, которые помогают мгновенно достигать цели и окутывать противника тьмой.</p>
                 
                 <div class="server-info">
                     <i class="fas fa-server"></i>
@@ -1653,7 +1665,7 @@
                         <i class="fas fa-book"></i>
                     </div>
                     <h3>Регламент</h3>
-                    <p>Основные правила и принципы, которые соблюдает каждый членам дыхания. Дисциплина и порядок - залог успешного развития.</p>
+                    <p>Основные правила и принципы, которые соблюдает каждый член дыхания. Дисциплина и порядок - залог успешного развития.</p>
                     <div class="feature-button" onclick="showSection('rules')">
                         Читать регламент
                     </div>
@@ -1680,7 +1692,7 @@
 
             <div class="ranks-grid">
                 <div class="rank-card">
-                    <div class="rank-icon"><i class="fas fa-sun"></i></div>
+                    <div class="rank-icon"><i class="fas fa-moon"></i></div>
                     <h3 class="rank-title">Seito → Midzunoto</h3>
                     <div class="rank-points">Пройти фин.отбор</div>
                     <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката: 1 день</div>
@@ -1690,7 +1702,7 @@
                 </div>
                 
                 <div class="rank-card">
-                    <div class="rank-icon"><i class="fas fa-sun"></i></div>
+                    <div class="rank-icon"><i class="fas fa-moon"></i></div>
                     <h3 class="rank-title">Midzunoto → Midzunoe</h3>
                     <div class="rank-points">10 баллов</div>
                     <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката: 1 день</div>
@@ -1700,7 +1712,7 @@
                 </div>
                 
                 <div class="rank-card">
-                    <div class="rank-icon"><i class="fas fa-sun"></i></div>
+                    <div class="rank-icon"><i class="fas fa-moon"></i></div>
                     <h3 class="rank-title">Midzunoe → Kanoto</h3>
                     <div class="rank-points">15 баллов</div>
                     <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката: 1 день</div>
@@ -1710,7 +1722,7 @@
                 </div>
                 
                 <div class="rank-card">
-                    <div class="rank-icon"><i class="fas fa-sun"></i></div>
+                    <div class="rank-icon"><i class="fas fa-moon"></i></div>
                     <h3 class="rank-title">Kanoto → Kanoe</h3>
                     <div class="rank-points">20 баллов</div>
                     <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката: 1 день</div>
@@ -1720,7 +1732,7 @@
                 </div>
                 
                 <div class="rank-card">
-                    <div class="rank-icon"><i class="fas fa-sun"></i></div>
+                    <div class="rank-icon"><i class="fas fa-moon"></i></div>
                     <h3 class="rank-title">Kanoe → Tsuchinoto</h3>
                     <div class="rank-points">25 баллов</div>
                     <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката: 2 день</div>
@@ -1730,7 +1742,7 @@
                 </div>
         
                 <div class="rank-card">
-                    <div class="rank-icon"><i class="fas fa-sun"></i></div>
+                    <div class="rank-icon"><i class="fas fa-moon"></i></div>
                     <h3 class="rank-title">Tsuchinoto → Tsuchinoe</h3>
                     <div class="rank-points">30 баллов</div>
                     <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката: 2 день</div>
@@ -1740,7 +1752,7 @@
                 </div>
 
                 <div class="rank-card">
-                    <div class="rank-icon"><i class="fas fa-sun"></i></div>
+                    <div class="rank-icon"><i class="fas fa-moon"></i></div>
                     <h3 class="rank-title">Tsuchinoe → Hinoto</h3>
                     <div class="rank-points">35 баллов</div>
                     <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката: 3 день</div>
@@ -1750,7 +1762,7 @@
                 </div>
 
                 <div class="rank-card">
-                    <div class="rank-icon"><i class="fas fa-sun"></i></div>
+                    <div class="rank-icon"><i class="fas fa-moon"></i></div>
                     <h3 class="rank-title">Hinoto → Hinoe</h3>
                     <div class="rank-points">40 баллов</div>
                     <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката: 3 дня</div>
@@ -1767,7 +1779,7 @@
 
             <div class="ranks-grid">
                 <div class="rank-card">
-                    <div class="rank-icon"><i class="fas fa-sun"></i></div>
+                    <div class="rank-icon"><i class="fas fa-moon"></i></div>
                     <h3 class="rank-title">Hinoe → Kinoto</h3>
                     <div class="rank-points">45 баллов и одобрение от цугуко</div>
                     <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката: 3 дня</div>
@@ -1777,9 +1789,9 @@
                 </div>
                 
                 <div class="rank-card">
-                    <div class="rank-icon"><i class="fas fa-sun"></i></div>
+                    <div class="rank-icon"><i class="fas fa-moon"></i></div>
                     <h3 class="rank-title">Kinoto → Kinoe</h3>
-                    <div class="rank-points">50 баллов и одобрение от хаширы света</div>
+                    <div class="rank-points">50 баллов и одобрение от хаширы шинигами</div>
                     <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката: 3 дня</div>
                     <div class="progress-container">
                         <div class="progress-bar" style="width: 100%"></div>
@@ -1832,8 +1844,8 @@
                         <div class="activity-points">6 баллов</div>
                     </div>
                     <div class="activity-item">
-                        <div class="activity-name"><i class="fas fa-tasks"></i> Проведение тренировки (фракция)</div>
-                        <div class="activity-points">8 баллов</div>
+                        <div class="activity-name"><i class="fas fa-tasks"></i> Проведение ритуала связанного с сатанизмом</div>
+                        <div class="activity-points">15 баллов</div>
                     </div>
                     <div class="activity-item">
                         <div class="activity-name"><i class="fas fa-user-tie"></i> Захват важной точки</div>
@@ -1872,7 +1884,7 @@
         <div id="rules" class="section">
             <div class="page-header">
                 <h1>Регламент</h1>
-                <p>Документ, описывающий правила и порядок выполнения определенных действий или процессов в дыхание. Устанавливает стандарты, определяет последовательность шагов и назначает ответственных лиц.</p>
+                <p>Документ, описывающий правила и порядок выполнения определенных действий или процессов в дыхании. Устанавливает стандарты, определяет последовательность шагов и назначает ответственных лиц.</p>
             </div>
 
             <div class="rules-grid">
@@ -1888,7 +1900,7 @@
                     <div class="rule-icon"><i class="fas fa-gavel"></i></div>
                     <h3 class="rule-title">Цель регламента</h3>
                     <ul class="rule-list">
-                        <li>Он координирует деятельность дыхания света, в нем описаны инструкции для истребителей, которые они должны соблюдать и выполнять.</li>
+                        <li>Он координирует деятельность дыхания шинигами, в нем описаны инструкции для истребителей, которые они должны соблюдать и выполнять.</li>
                     </ul>
                 </div>
                 
@@ -1910,7 +1922,7 @@
                     <div class="rank-icon"><i class="fas fa-clock"></i></div>
                     <h3 class="rank-title">Старший состав</h3>
                     <div class="rank-points">60 минут в день</div>
-                    <div class="rank-cooldown"></i> Цугуко света</div>
+                    <div class="rank-cooldown"></i> Цугуко шинигами</div>
                     <p>Помимо выполнения недельной квоты, обязаны оказывать активную помощь в работе с личным составом.</p>
                 </div>
                 
@@ -1918,7 +1930,7 @@
                     <div class="rank-icon"><i class="fas fa-clock"></i></div>
                     <h3 class="rank-title">Средний Состав</h3>
                     <div class="rank-points">60 минут в день</div>
-                    <div class="rank-cooldown"></i> Инструктор света</div>
+                    <div class="rank-cooldown"></i> Инструктор шинигами</div>
                     <p>Инструктора, выполняющие обучающую функцию в составе.</p>
                 </div>
                 
@@ -1926,8 +1938,8 @@
                     <div class="rank-icon"><i class="fas fa-clock"></i></div>
                     <h3 class="rank-title">Основной Состав</h3>
                     <div class="rank-points">60 минут в день</div>
-                    <div class="rank-cooldown"></i> Истребитель света</div>
-                    <p>Основной состав дыхания света, что состоит из обычных истребителей дыхания.</p>
+                    <div class="rank-cooldown"></i> Истребитель шинигами</div>
+                    <p>Основной состав дыхания шинигами, что состоит из обычных истребителей дыхания.</p>
                 </div>
             </div>
 
@@ -1989,7 +2001,7 @@
 
         <div id="team" class="section">
             <div class="page-header">
-                <h1>СОСТАВ ДЫХАНИЯ СВЕТА</h1>
+                <h1>СОСТАВ ДЫХАНИЯ ШИНИГАМИ</h1>
                 <p>Иерархическая структура дыхания, включающая руководство, инструкторов и основной состав.</p>
             </div>
 
@@ -1998,9 +2010,9 @@
                     <h2 class="category-title">Командный состав</h2>
                     <div class="members-grid">
                         <div class="member-card">
-                            <div class="member-avatar"><i class="fas fa-sun"></i></div>
-                            <div class="member-rank">Столп стиля Света</div>
-                            <div class="member-name">Lin Seikage</div>
+                            <div class="member-avatar"><i class="fas fa-circle"></i></div>
+                            <div class="member-rank">Столп стиля Шинигами</div>
+                            <div class="member-name">Naoki Seikage</div>
                             <div class="member-role">Hashira[12]<br>Высшее руководство</div>
                         </div>
                     </div>
@@ -2010,15 +2022,15 @@
                     <h2 class="category-title">Старший состав</h2>
                     <div class="members-grid">
                         <div class="member-card">
-                            <div class="member-avatar"><i class="fas fa-sun"></i></div>
-                            <div class="member-rank">Цугуко Света</div>
-                            <div class="member-name">Naoki Seikage</div>
+                            <div class="member-avatar"><i class="fas fa-moon"></i></div>
+                            <div class="member-rank">Цугуко Шинигами</div>
+                            <div class="member-name">August D. Graceford</div>
                             <div class="member-role">Kinoe[11]</div>
                         </div>
                         
                         <div class="member-card">
-                            <div class="member-avatar"><i class="fas fa-sun"></i></div>
-                            <div class="member-rank">Цугуко Света</div>
+                            <div class="member-avatar"><i class="fas fa-moon"></i></div>
+                            <div class="member-rank">Цугуко Шинигами</div>
                             <div class="member-name">Kazye Kuroda</div>
                             <div class="member-role">Kinoe[11]</div>
                         </div>
@@ -2028,23 +2040,23 @@
                 <div class="team-category">
                     <h2 class="category-title">Средний Состав</h2>
                     <div class="members-grid">
-                        <div class="member-card">
+                        <div class="member-card vacant">
                             <div class="member-avatar"><i class="fas fa-shield-alt"></i></div>
-                            <div class="member-rank">Инструктор Света</div>
-                            <div class="member-name">Nico Kobayasi</div>
-                            <div class="member-role">Kinoe[11]</div>
-                        </div>
-
-                        <div class="member-card">
-                            <div class="member-avatar"><i class="fas fa-shield-alt"></i></div>
-                            <div class="member-rank">Инструктор Света</div>
-                            <div class="member-name">Ritsuka Yamaoki</div>
-                            <div class="member-role">Kinoe[11]</div>
+                            <div class="member-rank">Инструктор Шинигами</div>
+                            <div class="member-name">[Вакантно]</div>
+                            <div class="member-role">Свободная позиция</div>
                         </div>
 
                         <div class="member-card vacant">
                             <div class="member-avatar"><i class="fas fa-shield-alt"></i></div>
-                            <div class="member-rank">Инструктор Света</div>
+                            <div class="member-rank">Инструктор Шинигами</div>
+                            <div class="member-name">[Вакантно]</div>
+                            <div class="member-role">Свободная позиция</div>
+                        </div>
+
+                        <div class="member-card vacant">
+                            <div class="member-avatar"><i class="fas fa-shield-alt"></i></div>
+                            <div class="member-rank">Инструктор Шинигами</div>
                             <div class="member-name">[Вакантно]</div>
                             <div class="member-role">Свободная позиция</div>
                         </div>
@@ -2054,37 +2066,37 @@
                 <div class="team-category">
                     <h2 class="category-title">Основной состав</h2>
                     <div class="members-grid">
-                        <div class="member-card">
-                            <div class="member-avatar"><i class="fas fa-user"></i></div>
-                            <div class="member-rank">Истребитель Света</div>
-                            <div class="member-name">Zume Sudzuki</div>
-                            <div class="member-role">Hinoe[8]</div>
-                        </div>
-                        
-                        <div class="member-card">
-                            <div class="member-avatar"><i class="fas fa-user"></i></div>
-                            <div class="member-rank">Истребитель Света</div>
-                            <div class="member-name">Ayamo Morita</div>
-                            <div class="member-role">Midzunoto[2]</div>
-                        </div>
-
-                        <div class="member-card">
-                            <div class="member-avatar"><i class="fas fa-user"></i></div>
-                            <div class="member-rank">Ученик Света</div>
-                            <div class="member-name">Reiu Amashima</div>
-                            <div class="member-role">Seito[1]</div>
-                        </div>                             
-
                         <div class="member-card vacant">
                             <div class="member-avatar"><i class="fas fa-user"></i></div>
-                            <div class="member-rank">Истребитель Света</div>
+                            <div class="member-rank">Истребитель Шинигами</div>
                             <div class="member-name">[Вакантно]</div>
                             <div class="member-role">Свободная позиция</div>
                         </div>
                         
                         <div class="member-card vacant">
                             <div class="member-avatar"><i class="fas fa-user"></i></div>
-                            <div class="member-rank">Истребитель Света</div>
+                            <div class="member-rank">Истребитель Шинигами</div>
+                            <div class="member-name">[Вакантно]</div>
+                            <div class="member-role">Свободная позиция</div>
+                        </div>
+
+                        <div class="member-card vacant">
+                            <div class="member-avatar"><i class="fas fa-user"></i></div>
+                            <div class="member-rank">Истребитель Шинигами</div>
+                            <div class="member-name">[Вакантно]</div>
+                            <div class="member-role">Свободная позиция</div>
+                        </div>                             
+
+                        <div class="member-card vacant">
+                            <div class="member-avatar"><i class="fas fa-user"></i></div>
+                            <div class="member-rank">Истребитель Шинигами</div>
+                            <div class="member-name">[Вакантно]</div>
+                            <div class="member-role">Свободная позиция</div>
+                        </div>
+                        
+                        <div class="member-card vacant">
+                            <div class="member-avatar"><i class="fas fa-user"></i></div>
+                            <div class="member-rank">Истребитель Шинигами</div>
                             <div class="member-name">[Вакантно]</div>
                             <div class="member-role">Свободная позиция</div>
                         </div>
@@ -2095,8 +2107,8 @@
        
         <div class="footer">
             <div class="container">
-                <p>© 2025 Дыхание Света | s5.yufu.su:27017 | by whiteprince</p>
-                <p style="margin-top: 10px; font-size: 0.9em;">Дисциплина • Честь • Тишина</p>
+                <p>© 2025 Дыхание Шинигами | s5.yufu.su:27017 | by whiteprince</p>
+                <p style="margin-top: 10px; font-size: 0.9em;">Дисциплина • Честь • Сатанизм</p>
             </div>
         </div>
     </div>
@@ -2171,7 +2183,7 @@
             }
             
             const themeBtns = document.querySelectorAll('.theme-btn');
-            const currentTheme = localStorage.getItem('theme') || 'dark';
+            const currentTheme = localStorage.getItem('theme') || 'light';
             
             document.documentElement.setAttribute('data-theme', currentTheme);
             
@@ -2370,9 +2382,9 @@
                         y: Math.random() * this.canvas.height,
                         size: Math.random() * 3 + 1,
                         color: [
-                            Math.random() * 0.3 + 0.1,
+                            Math.random() * 0.4 + 0.1,
                             Math.random() * 0.2 + 0.1,
-                            Math.random() * 0.4 + 0.2
+                            Math.random() * 0.5 + 0.3
                         ],
                         alpha: Math.random() * 0.3 + 0.1,
                         speedX: (Math.random() - 0.5) * 0.5,
