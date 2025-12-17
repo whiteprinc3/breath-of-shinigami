@@ -766,6 +766,35 @@
             color: var(--purple);
         }
 
+        /* Стили для иконок переключателя в светлой теме */
+        .theme-btn .fa-sun {
+            color: #ff9900;
+        }
+
+        .theme-btn .fa-moon {
+            color: #6b5b9a;
+        }
+
+        .theme-btn.active .fa-sun {
+            color: #ff6600;
+            text-shadow: 0 0 8px rgba(255, 102, 0, 0.3);
+        }
+
+        .theme-btn.active .fa-moon {
+            color: #8a2be2;
+            text-shadow: 0 0 8px rgba(139, 107, 226, 0.3);
+        }
+
+        .theme-btn:hover .fa-sun {
+            color: #ff6600;
+            transform: scale(1.1);
+        }
+
+        .theme-btn:hover .fa-moon {
+            color: #8a2be2;
+            transform: scale(1.1);
+        }
+
         /* Темная тема (черная с фиолетовыми элементами) */
         [data-theme="dark"] {
             --black: #0a0a0f;
@@ -1056,6 +1085,82 @@
         [data-theme="dark"] .member-card.vacant {
             background: rgba(42, 42, 62, 0.4) !important;
             border: 2px dashed rgba(139, 107, 226, 0.4) !important;
+        }
+
+        /* Стили для переключателя темы в темной теме */
+        [data-theme="dark"] .theme-switcher {
+            background: rgba(42, 42, 62, 0.9) !important;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(139, 107, 226, 0.6) !important;
+            box-shadow: 
+                0 4px 15px rgba(139, 107, 226, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        [data-theme="dark"] .theme-btn {
+            color: #d8bfd8 !important;
+            background: transparent !important;
+            transition: all 0.3s ease;
+        }
+
+        [data-theme="dark"] .theme-btn.active {
+            background: linear-gradient(135deg, rgba(139, 107, 226, 0.4), rgba(107, 91, 154, 0.3)) !important;
+            color: #e6e6fa !important;
+            border: 1px solid rgba(139, 107, 226, 0.8) !important;
+            box-shadow: 
+                0 0 15px rgba(139, 107, 226, 0.3),
+                inset 0 1px 2px rgba(255, 255, 255, 0.1);
+            text-shadow: 0 0 5px rgba(139, 107, 226, 0.5);
+            animation: themeBtnGlow 2s infinite alternate;
+        }
+
+        [data-theme="dark"] .theme-btn:hover:not(.active) {
+            background: rgba(58, 58, 78, 0.7) !important;
+            border: 1px solid rgba(139, 107, 226, 0.5) !important;
+            color: #e6e6fa !important;
+            transform: scale(1.05);
+        }
+
+        @keyframes themeBtnGlow {
+            0% {
+                box-shadow: 
+                    0 0 10px rgba(139, 107, 226, 0.3),
+                    inset 0 1px 2px rgba(255, 255, 255, 0.1);
+            }
+            100% {
+                box-shadow: 
+                    0 0 20px rgba(139, 107, 226, 0.5),
+                    inset 0 1px 3px rgba(255, 255, 255, 0.2);
+            }
+        }
+
+        /* Стили для иконок переключателя в темной теме */
+        [data-theme="dark"] .theme-btn .fa-sun {
+            color: #ffd700 !important;
+        }
+
+        [data-theme="dark"] .theme-btn .fa-moon {
+            color: #e6e6fa !important;
+        }
+
+        [data-theme="dark"] .theme-btn.active .fa-sun {
+            color: #ffed4e !important;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
+        [data-theme="dark"] .theme-btn.active .fa-moon {
+            color: #c9a8ff !important;
+            text-shadow: 0 0 10px rgba(139, 107, 226, 0.5);
+        }
+
+        [data-theme="dark"] .theme-btn:hover .fa-sun {
+            color: #ffed4e !important;
+            transform: scale(1.1);
+        }
+
+        [data-theme="dark"] .theme-btn:hover .fa-moon {
+            color: #c9a8ff !important;
+            transform: scale(1.1);
         }
 
         /* ЭФФЕКТЫ ПОДСВЕТКИ */
@@ -1630,7 +1735,7 @@
         <div id="main" class="section active">
             <section class="hero">
                 <h1>ДЫХАНИЕ ШИНИГАМИ</h1>
-                <p>Дыхание Шинигами (死神しにがみの呼こ吸きゅう Shinigami no kokyū) — одно из производных дыханий, основанное на принципах дыхания луны и тумана.</p>
+                <p>Дыхание Шинигами (死神しにがみの呼こ吸きゅう Shinigami no kokyū) — одно из производных дыханий, основанное на принципах дыхания луны.</p>
                 <p>Техники Дыхания Шинигами сосредоточены на использовании изящных и таинственных движений, которые помогают мгновенно достигать цели и окутывать противника тьмой.</p>
                 
                 <div class="server-info">
@@ -2031,11 +2136,11 @@
                 <div class="team-category">
                     <h2 class="category-title">Средний Состав</h2>
                     <div class="members-grid">
-                        <div class="member-card">
+                        <div class="member-card vacant">
                             <div class="member-avatar"><i class="fas fa-shield-alt"></i></div>
                             <div class="member-rank">Инструктор Шинигами</div>
-                            <div class="member-name">Hesdo Sinch</div>
-                            <div class="member-role">Kinoe[11]</div>
+                            <div class="member-name">[Вакантно]</div>
+                            <div class="member-role">Свободная позиция</div>
                         </div>
 
                         <div class="member-card vacant">
@@ -2085,7 +2190,7 @@
                             <div class="member-role">Свободная позиция</div>
                         </div>
                         
-                        <div class="member-card vacant">
+                        <div class="member-card vacant">  <!-- Исправленная строка -->
                             <div class="member-avatar"><i class="fas fa-user"></i></div>
                             <div class="member-rank">Истребитель Шинигами</div>
                             <div class="member-name">[Вакантно]</div>
@@ -2453,5 +2558,3 @@
     </script>
 </body>
 </html>
-
-
